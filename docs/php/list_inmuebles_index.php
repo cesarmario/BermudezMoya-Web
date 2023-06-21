@@ -32,7 +32,6 @@ $queryinmuebles = "SELECT * FROM vista_inmuebles WHERE baja != '1' $filtro ORDER
 
 $rtsinmuebles = mysqli_query($conexion, $queryinmuebles);
 
-//$listado = "<div class='row mb-5'>";
 $listado = "";
 
 while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
@@ -68,6 +67,9 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
         $valorInmueble = "Consultar";
     };
     $domicilio = "";
+    if (!empty($inmuebles['domicilioCalleInmueble'])) {
+        $domicilio .= $inmuebles['domicilioCalleInmueble'];
+    }
     if (!empty($inmuebles['domicilioNumeroInmueble'])) {
         $domicilio .= " " . $inmuebles['domicilioNumeroInmueble'];
     }
@@ -82,16 +84,32 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
     $nombreLocalidad = $inmuebles['nombreLocalidad'];
 
 
-    $listado .= "<div class='col-sm-6 col-md-3 p0'>";
-    $listado .= "<div class='box-two proerty-item'>";
-    $listado .= "<div class='item-thumb'>";
-    $listado .= "<a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "'><img src='" . $nomimg . "'></a>";
+    $listado .= "<div class='col-md-4'>";
+    $listado .= "<div class='property-wrap ftco-animate'>";
+    $listado .= "<div class='img d-flex align-items-center justify-content-center' style='background-image: url(" . $nomimg . ")'>";
+    $listado .= "<a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "' class='icon d-flex align-items-center justify-content-center btn-custom'>";
+    $listado .= "<span class='ion-ios-link'></span>";
+    $listado .= "</a>";
+    $listado .= "<div class='list-agent d-flex align-items-center'>";
+    $listado .= "<a class='agent-info d-flex align-items-center'>";
+    $listado .= "<div class='img-2 rounded-circle' style='background-image: url(images/img-logo/venta.png)'></div>";
+    $listado .= "<h3 class='mb-0 ml-2'>" . $nombreOperacion . "</h3>";
+    $listado .= "</a>";
     $listado .= "</div>";
-    $listado .= "<div class='item-entry overflow'>";
-    $listado .= "<h5><a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "'>" .  $inmuebles['tituloInmueble'] . "</a></h5>";
-    $listado .= "<div class='dot-hr'>" . $nombreLocalidad . "</div>";
-    $listado .= "<span class='pull-left'><b>" . $nombreOperacion . "</b></span>";
-    $listado .= "<span class='proerty-price pull-right'>" . $valorInmueble . "</span>";
+    $listado .= "</div>";
+    $listado .= "<div class='text'>";
+    $listado .= "<p class='price mb-3'>";
+    $listado .= "<span class='orig-price'>" . $valorInmueble . "<small></small></span>";
+    $listado .= "</p>";
+    $listado .= "<h3 class='mb-0'>";
+    $listado .= "<a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "'>" .  $inmuebles['tituloInmueble'] . "</a>";
+    $listado .= "</h3>";
+    $listado .= "<span class='location d-inline-block mb-3'><i class='ion-ios-pin mr-2'></i>" . $domicilio . "</span>";
+    $listado .= "<ul class='property_list'>";
+    $listado .= "<li><span class='flaticon-bed'></span>" . $habitacionesInmueble . "</li>";
+    $listado .= "<li><span class='flaticon-bathtub'></span>" . $banosInmueble . "</li>";
+    $listado .= "<li><span class='flaticon-floor-plan'></span>" . $superficieCubiertaInmueble . " m2</li>";
+    $listado .= "</ul>";
     $listado .= "</div>";
     $listado .= "</div>";
     $listado .= "</div>";
