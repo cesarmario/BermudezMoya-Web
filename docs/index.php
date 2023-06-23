@@ -46,7 +46,7 @@ include('php/list_inmuebles_index.php');
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/img-logo/logo-prueba1.png" alt="" />
+            <a class="navbar-brand" href="index.php"><img src="images/img-logo/logo-prueba1.png" alt="" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
@@ -55,7 +55,7 @@ include('php/list_inmuebles_index.php');
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="index.html" class="nav-link">Inicio</a>
+                        <a href="index.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a href="nosotros.html" class="nav-link">Nosotros</a>
@@ -67,7 +67,7 @@ include('php/list_inmuebles_index.php');
                         <a href="agentes.html" class="nav-link">Agentes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="propiedades.html" class="nav-link">Propiedades</a>
+                        <a href="propiedades.php" class="nav-link">Propiedades</a>
                     </li>
                     <li class="nav-item">
                         <a href="contacto.html" class="nav-link">Contacto</a>
@@ -137,139 +137,9 @@ include('php/list_inmuebles_index.php');
             <div class="row">
                 <?PHP echo $listado; ?>
 
-
-                <div class="col-md-4">
-                    <div class="property-wrap ftco-animate">
-                        <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/img-propiedades/casa3.jpeg)">
-                            <a href="detalle-inmueble.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                                <span class="ion-ios-link"></span>
-                            </a>
-                            <div class="list-agent d-flex align-items-center">
-                                <a class="agent-info d-flex align-items-center">
-                                    <div class="img-2 rounded-circle" style=" 
-                        background-image: url(images/img-logo/alquiler.png);
-                      "></div>
-                                    <h3 class="mb-0 ml-2">Alquiler</h3>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p class="price mb-3">
-                                <span class="old-price"></span><span class="orig-price">$45.000<small></small></span>
-                            </p>
-                            <h3 class="mb-0">
-                                <a href="detalle-inmueble.html">Casa con cochera</a>
-                            </h3>
-                            <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>Villa América - Capital</span>
-                            <ul class="property_list">
-                                <li><span class="flaticon-bed"></span>3</li>
-                                <li><span class="flaticon-bathtub"></span>1</li>
-                                <li><span class="flaticon-floor-plan"></span>72 m2</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="property-wrap ftco-animate">
-                        <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/img-propiedades/casa4.jpeg)">
-                            <a href="detalle-inmueble.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                                <span class="ion-ios-link"></span>
-                            </a>
-                            <div class="list-agent d-flex align-items-center">
-                                <a class="agent-info d-flex align-items-center">
-                                    <div class="img-2 rounded-circle" style="
-                        background-image: url(images/img-logo/alquiler.png);
-                      "></div>
-                                    <h3 class="mb-0 ml-2">Alquiler</h3>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p class="price mb-3">
-                                <span class="old-price"></span><span class="orig-price">$55.000<small></small></span>
-                            </p>
-                            <h3 class="mb-0">
-                                <a href="detalle-inmueble.html">Local comercial</a>
-                            </h3>
-                            <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>Zona comercial en
-                                Rawson</span>
-                            <ul class="property_list">
-                                <li><span class="flaticon-bed"></span>0</li>
-                                <li><span class="flaticon-bathtub"></span>1</li>
-                                <li><span class="flaticon-floor-plan"></span>35 m2</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="property-wrap ftco-animate">
-                        <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/img-propiedades/casa5.jpeg)">
-                            <a href="detalle-inmueble.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                                <span class="ion-ios-link"></span>
-                            </a>
-                            <div class="list-agent d-flex align-items-center">
-                                <a class="agent-info d-flex align-items-center">
-                                    <div class="img-2 rounded-circle" style="background-image: url(images/img-logo/venta.png)"></div>
-                                    <h3 class="mb-0 ml-2">Venta</h3>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p class="price mb-3">
-                                <span class="old-price"></span><span class="orig-price">Consultar<small></small></span>
-                            </p>
-                            <h3 class="mb-0">
-                                <a href="detalle-inmueble.html">Finca 14 ha.</a>
-                            </h3>
-                            <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>Dos Alamos s/n, La Majadita -
-                                9 de Julio</span>
-                            <ul class="property_list">
-                                <li><span class="flaticon-bed"></span>0</li>
-                                <li><span class="flaticon-bathtub"></span>0</li>
-                                <li><span class="flaticon-floor-plan"></span>14.532 m2</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="property-wrap ftco-animate">
-                        <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/img-propiedades/casa6.jpeg)">
-                            <a href="detalle-inmueble.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                                <span class="ion-ios-link"></span>
-                            </a>
-                            <div class="list-agent d-flex align-items-center">
-                                <a class="agent-info d-flex align-items-center">
-                                    <div class="img-2 rounded-circle" style="
-                        background-image: url(images/img-logo/alquiler.png);
-                      "></div>
-                                    <h3 class="mb-0 ml-2">Alquiler</h3>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p class="price mb-3">
-                                <span class="old-price">$45.000</span><span class="orig-price">$35.000<small></small></span>
-                            </p>
-                            <h3 class="mb-0">
-                                <a href="detalle-inmueble.html">Departamento Bº Aramburu</a>
-                            </h3>
-                            <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>Barrio Aramburu -
-                                Rivadavia</span>
-                            <ul class="property_list">
-                                <li><span class="flaticon-bed"></span>3</li>
-                                <li><span class="flaticon-bathtub"></span>2</li>
-                                <li><span class="flaticon-floor-plan"></span>80 m2</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-md-12 heading-section text-center ftco-animate mb-5">
                     <p>
-                        <a href="propiedades.html" class="btn btn-primary py-3 px-4">Ver todas las Propiedades disponibles</a>
+                        <a href="propiedades.php" class="btn btn-primary py-3 px-4">Ver todas las Propiedades disponibles</a>
                     </p>
                 </div>
             </div>

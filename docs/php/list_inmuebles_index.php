@@ -47,7 +47,7 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
         $nomimg = "gestion/assets/images/inmuebles/00000000.png";
     }
     if ($inmuebles['habitacionesInmueble'] > 0) {
-        $habitacionesInmueble = $inmuebles['habitacionesInmueble'] . "<sup>+</sup>";
+        $habitacionesInmueble = $inmuebles['habitacionesInmueble'];
     } else {
         $habitacionesInmueble = "-";
     };
@@ -77,7 +77,7 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
         $domicilio .= " " . $inmuebles['domicilioOrientacionInmueble'];
     }
     if (!empty($inmuebles['nombreLocalidad'])) {
-        $domicilio .= "<br>&nbsp;<b>" . $inmuebles['nombreLocalidad'] . "</b>";
+        $domicilio .= " - " . $inmuebles['nombreLocalidad'] . "</b>";
     }
 
     $nombreOperacion = $inmuebles['nombreOperacion'];
