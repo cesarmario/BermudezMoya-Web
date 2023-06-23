@@ -18,6 +18,9 @@ if (!empty($inmueble['domicilioNumeroInmueble'])) {
 if (!empty($inmueble['domicilioOrientacionInmueble'])) {
     $domicilio .= " " . $inmueble['domicilioOrientacionInmueble'];
 }
+if (!empty($inmueble['nombreLocalidad'])) {
+    $domicilio .= ", " . $inmueble['nombreLocalidad'];
+}
 
 if (!empty($inmueble['cocheraInmueble'])) {
     $cocheraInmueble = $inmueble['cocheraInmueble'];
@@ -116,10 +119,10 @@ if ($inmueble['valorInmueble'] > 0) {
 
 $tituloInmueble = $inmueble['tituloInmueble'];
 $nombreOperacion = $inmueble['nombreOperacion'];
-$descripcionInmueble = $inmueble['descripcionInmueble'];
 $nombreLocalidad = $inmueble['nombreLocalidad'];
-
-
+$nombrePropiedad = $inmueble['nombrePropiedad'];
+$descripcionInmueble = $inmueble['descripcionInmueble'];
+$informacionAdicionalInmueble = $inmueble['informacionAdicionalInmueble'];
 
 $queryimagen = "SELECT * FROM imagen WHERE idInmueble = '$idInmueble' AND baja != '1' ORDER BY ordenImagen ASC LIMIT 1";
 $rtsimagen = mysqli_query($conexion, $queryimagen);
@@ -128,26 +131,20 @@ $idimg = $img['idImagen'];
 $tpimg = $img['tipoImagen'];
 $nomimg = "gestion/assets/images/inmuebles/" . str_pad($idimg, 8, "0", STR_PAD_LEFT) . "." . $tpimg;
 $vistaImg = "";
-$listadoImg = "<ul id='image-gallery' class='gallery list-unstyled cS-hidden'>";
+$listadoImg = "<div class='carousel-slide'>";
 if (!file_exists($nomimg)) {
     $nomimg = "gestion/assets/images/inmuebles/00000000.png";
-    $listadoImg .= "<div><img src='" . $nomimg . "' alt='Image' class='img-fluid'></div>";
 
-    $listadoImg .= "<li data-thumb='" . $nomimg . "'>";
-    $listadoImg .= "<img src='" . $nomimg . "' />";
-    $listadoImg .= "</li>";
+    $listadoImg = "<img src='" . $nomimg . "' alt='Imagen'>";
 } else {
     $queryimagenes = "SELECT * FROM imagen WHERE idInmueble = '$idInmueble' AND baja != '1' ORDER BY ordenImagen ASC";
     $rtsimagenes = mysqli_query($conexion, $queryimagenes);
     while ($imagenes = mysqli_fetch_assoc($rtsimagenes)) {
         $imagen = "/gestion/assets/images/inmuebles/" . str_pad($imagenes['idImagen'], 8, "0", STR_PAD_LEFT) . "." . $imagenes['tipoImagen'];
-        $listadoImg .= "<li data-thumb='" . $imagen . "'>";
-        $listadoImg .= "<img src='" . $imagen . "' />";
-        $listadoImg .= "</li>";;
-        $vistaImg .= "<div><img src='" . $imagen . "' alt='Image' width='950px'></div>";
+        $listadoImg .= "<img src='" . $imagen . "' alt='" . $imagenes['idImagen'] . "'>";
     }
 }
-$listadoImg .= "</ul>";
+$listadoImg .= "</div>";
 
   //  $queryUsuario = "SELECT * FROM usuario WHERE idUsuario = '$inmueble[idUsuario]'";
   //  $rtsUsuario = mysqli_query($conexion, $queryUsuario);
@@ -160,4 +157,4 @@ $listadoImg .= "</ul>";
   //  $logoCorredor="/gestion/assets/images/usuarios/" . $domicilioCorredor=$contacto['logoUsuario'];
   //  if(!file_exists($nomimg)){
   //      $logoCorredor="/gestion/assets/images/usuarios/00000000.png";
-  //  } 
+  //  }
