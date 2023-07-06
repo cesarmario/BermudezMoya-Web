@@ -392,11 +392,14 @@ include('php/list_inmuebles_index.php');
                         <h2 class="ftco-heading-2">Enlaces de Interés</h2>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="http://www.corredoresinmobiliariossj.org/#!/-inicio/"><span class="icon-long-arrow-right mr-2"></span>C.P.C.I.S.J.</a>
+                                <a href="http://www.corredoresinmobiliariossj.org/#!/-inicio/" target="_blank"><span class="icon-long-arrow-right mr-2"></span>C.P.C.I.S.J.</a>
                             </li>
                             <li>
-                                <a href="https://www.enlaceinmobiliario.com.ar/"><span class="icon-long-arrow-right mr-2"></span>Enlace
+                                <a href="https://www.enlaceinmobiliario.com.ar/" target="_blank"><span class="icon-long-arrow-right mr-2"></span>Enlace
                                     Inmobiliario</a>
+                            </li>
+                            <li>
+                                <a href="http://www.crsargentina.com.ar/" target="_blank"><span class="icon-long-arrow-right mr-2"></span>CRS Argentina</a>
                             </li>
                             <li>
                                 <a href="#"><span class="icon-long-arrow-right mr-2"></span>Preguntas
@@ -411,19 +414,19 @@ include('php/list_inmuebles_index.php');
                         <h2 class="ftco-heading-2">Navegación</h2>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#"><span class="icon-long-arrow-right mr-2"></span>Nosotros</a>
+                                <a href="nosotros.html"><span class="icon-long-arrow-right mr-2"></span>Nosotros</a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-long-arrow-right mr-2"></span>Servicios</a>
+                                <a href="servicios.html"><span class="icon-long-arrow-right mr-2"></span>Servicios</a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-long-arrow-right mr-2"></span>Agentes</a>
+                                <a href="agentes.html"><span class="icon-long-arrow-right mr-2"></span>Agentes</a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-long-arrow-right mr-2"></span>Propiedades</a>
+                                <a href="propiedades.php"><span class="icon-long-arrow-right mr-2"></span>Propiedades</a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-long-arrow-right mr-2"></span>Contacto</a>
+                                <a href="contacto.html"><span class="icon-long-arrow-right mr-2"></span>Contacto</a>
                             </li>
                             <li>
                                 <a href="gestion/"><span class="icon-long-arrow-right mr-2"></span>Gestion</a>
@@ -443,10 +446,13 @@ include('php/list_inmuebles_index.php');
                                         Juan</span>
                                 </li>
                                 <li>
-                                    <a href="#"><span class="icon icon-whatsapp"></span><span class="text">+54 264 670 5459</span></a>
+                                    <a href="#"><span class="icon icon-whatsapp"></span><span class="text">+54 264 581 3030 </span></a>
                                 </li>
                                 <li>
                                     <a href="#"><span class="icon icon-phone"></span><span class="text">+54 264 672 5589</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="icon icon-phone"></span><span class="text">+54 264 670 5459</span></a>
                                 </li>
                                 <li>
                                     <a href="#"><span class="icon icon-phone"></span><span class="text">+54 264 528 5352</span></a>
