@@ -266,7 +266,7 @@ include('php/list_inmuebles_index.php');
         </div>
     </section>
 
-    <section class="ftco-section testimony-section bg-light">
+    <!-- <section class="ftco-section testimony-section bg-light">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center heading-section ftco-animate">
@@ -370,7 +370,7 @@ include('php/list_inmuebles_index.php');
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="ftco-footer ftco-section">
         <div class="container">
